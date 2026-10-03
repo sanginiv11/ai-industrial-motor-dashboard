@@ -1,0 +1,6 @@
+flask
+numpy
+pandas
+# Only needed once the ML ensemble slot is enabled (see ml_slot.py):
+# scikit-learn
+# xgboost

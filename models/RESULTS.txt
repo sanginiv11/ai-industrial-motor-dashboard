@@ -1,0 +1,44 @@
+V3 Randomized Ensemble - Very Hard Independent Test
+===================================================
+
+Architecture:
+- 164 engineered features per 256-sample window
+- Time-domain robust statistics
+- Cross-sensor ratios
+- FFT band energies
+- RPM-normalized 0.5x..6x harmonic energies
+- Harmonic energy ratios
+- Spectral centroid/entropy
+- ExtraTrees + XGBoost probability ensemble
+
+Training:
+- 1,500 generated randomized training windows (250/class)
+- Training parameter distribution differs from hard-test parameter distribution
+- No hard-test windows used in training
+
+VERY HARD HOLDOUT:
+- 4 unseen seeds: 91427, 381991, 702114, 111223
+- 100 windows/class/seed
+- 2,400 total windows
+- Test RPM range 900-2100 RPM
+- Wider load, voltage, calibration, noise and drift variation
+- Overlapping fault severities
+- Fault frequencies vary with RPM
+
+Per-seed accuracy:
+91427:   86.50%
+381991:  88.83%
+702114:  89.33%
+111223:  89.33%
+
+AGGREGATE ACCURACY: 88.50%
+
+Per-class aggregate recall:
+Healthy:              79.00%
+Belt Misalignment:    94.00%
+Excessive Load:       72.50%
+Mechanical Imbalance: 88.00%
+Belt Slip:            100.00%
+Bearing Degradation:  97.50%
+
+Note: untouched original-source window accuracy was 45.00% for this synthetic-domain model, so this model should be treated as a hard-simulator model, not a validated real-world model.

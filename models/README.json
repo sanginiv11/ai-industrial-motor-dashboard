@@ -1,0 +1,15 @@
+{
+  "classes": [
+    "Healthy",
+    "Belt Misalignment",
+    "Excessive Load",
+    "Mechanical Imbalance",
+    "Belt Slip",
+    "Bearing Degradation"
+  ],
+  "window": 256,
+  "fs": 1000.0,
+  "train_windows": 1500,
+  "hard_test_windows": 2400,
+  "aggregate_note": "Held-out random simulator with unseen seeds/ranges; source test uses untouched original CSV windows."
+}
