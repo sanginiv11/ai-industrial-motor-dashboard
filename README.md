@@ -10,3 +10,5 @@ Honest limits
 - Severity is not in the dataset: shown as N/A. Energy "model output" uses severity 0; "upper bound" uses severity 1.0.
 - Simulator runs ~400 V; energy model reference is 230 V (unchanged) -> constant ~3% voltage-term offset.
 - All data and fault penalties are synthetic; nothing is validated on real motors.
+
+PUBLIC DEPLOYED URL: https://ai-industrial-motor-dashboard.onrender.com/
